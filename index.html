@@ -31,9 +31,9 @@
             border: none;
         }
 
-        /* De stijl voor het zwarte balkje */
         .portfolio-button {
-            margin-top: 50px;
+            /* De marge is hier verlaagd voor een hogere positie */
+            margin-top: 30px; 
             padding: 16px 32px;
             background-color: #000;
             color: #fff;
@@ -44,7 +44,7 @@
             font-weight: bold;
             transition: opacity 0.5s ease, background-color 0.3s ease;
             
-            /* Standaard onzichtbaar */
+            /* Onzichtbaar bij laden */
             opacity: 0;
             pointer-events: none; 
         }
@@ -80,7 +80,7 @@
         var player = new Vimeo.Player(iframe);
         var btn = document.querySelector('#portfolio-btn');
 
-        // Zodra de video begint te spelen (dus geladen is), tonen we de knop
+        // De knop verschijnt zodra de video begint te spelen
         player.on('play', function() {
             btn.classList.add('visible');
         });
